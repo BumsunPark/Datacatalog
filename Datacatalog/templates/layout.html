@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Catalog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link href="static/css/custom-navbar.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="datacatalog" style="font-size: 20px; float: left;">Data Catalog</a>
+
+        <a href="#" style="font-size: 16px; float: right;">{{ username }}<span class="caret"></span></a>
+
+        <a class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" style="font-size: 16px; float: right;">
+                {{ username }}<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#">사용자 계정 정보</a></li>
+            </ul>
+        </a>
+    </div>
+
+    <div class="sidenav">
+        <a href="datacatalog">Data Catalog</a>
+        <a href="dynamodb">DynamoDB</a>
+        <a href="s3">S3</a>
+    </div>
+
+    <!-- Page content -->
+    <div class="main">
+        {% block body_contents %}
+        {% endblock %}
+    </div>
+
+</body>
+
+</html>

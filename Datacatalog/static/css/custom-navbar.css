@@ -1,0 +1,68 @@
+:root {
+    --side-navbar-width: 160px;
+    --top-navbar-height: 50px;
+    --navbar-bg-color: #343a40;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.topnav {
+    height: var(--top-navbar-height);
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: var(--navbar-bg-color); /*rgb(133, 133, 133);*/ /* Black */
+}
+
+.topnav a{
+    padding: 10px 8px 10px 16px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: var(--font-family-sans-serif);
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: var(--side-navbar-width); /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: var(--navbar-bg-color); /*rgb(133, 133, 133);*/ /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    margin-top: var(--top-navbar-height);
+    padding-top: 10px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 10px 8px 10px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    display: block;
+    font-family: var(--font-family-sans-serif);
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #bbbbbb;
+}
+
+/* Style page content */
+.main {
+    margin-top: var(--top-navbar-height);  /* Same as the height of the topnav */
+    margin-left: var(--side-navbar-width); /* Same as the width of the sidenav */
+    padding: 12px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding: 5px 5px 5px 5px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
